@@ -1,0 +1,58 @@
+I made the input text in first 30 or so natural lines using our tagger.  And saved them as \n delimited files 0.story, 1.story, etc.
+
+## Data Prep
+
+Based on: https://github.com/uglyboxer/cnn-dailymail
+
+1. Create "stories" from asciidoc text files (book_parser.py)
+2. put stories in cnn-dailymail/stories as raw text files similar to Daily Mail data
+3. 
+
+The file reader is hardcode to ['{}.story’.format(x) for x in range(18)]
+
+$ python make_datafiles.py ./stories ./stories 
+
+Only the first directory is read (like I said, haX0r)
+
+Move the created finished_files/test.bin file to the other repo:
+
+Download the pretrained TF model from: https://github.com/uglyboxer/pointer-generator
+
+Put the test.bin file in the finished_files dir you’ll get.
+
+$ python run_summarization.py --mode=decode --data_path=/Users/cole-home/repos/summary/finished_files/test.bin --vocab_path=/Users/cole-home/repos/summary/finished_files/vocab  --log_root=/Users/cole-home/repos/summary/ --exp_name=pretrained_model_tf1.2.1 --max_enc_steps=400 --max_dec_steps=120 --coverage=1
+
+The hyperpameters listed are necessary as the model was initially trained with those.
+
+I apologize for the awful workflow. Was just trying to get something together quick.   Gonna be mostly offline starting Wed.
+
+C
+
+On July 23, 2018 at 8:34:24 PM, Hobson Lane (hobsonlane@gmail.com) wrote:
+> Oh definitely. I'll see if I can extract your mods and incorporate only those files into the examples folder, maybe monkey patch the other repos.
+>
+>
+> --Hobson
+>
+>
+> On Mon, Jul 23, 2018 at 8:15 PM, John Howard <uglyboxer@gmail.com> wrote:
+>
+>     Its a mixture of pretrained tensorflow implementation of seq2seq summarization and a package used to parse the CNN news dataset.  Both quick and dirty hacks to read our book (or the tagged lines anyway)  Id hate to drop 2 whole new repos into nlpia. How about I push up my forks and send you links to those. 
+>
+>     On Jul 23, 2018, at 8:04 PM, Hobson Lane <hobsonlane@gmail.com> wrote:
+>
+>>     wow, that's pretty impressive!  With a detokenizer, and a bit of biased sampling, I can probably use some of these sentences. thank you!  can you push the code to nlpia so I can check it out?
+>>
+>>
+>>     --Hobson
+>>
+>>
+>>     On Mon, Jul 23, 2018 at 8:01 PM, John Howard <uglyboxer@gmail.com> wrote:
+>>
+>>         Hey Hobs,
+>>
+>>          I got the model to work.  I basically had it summarize the first 30 or so lines of each chapter and intro section.  I killed it before it did the last few (they were processed out of order).  Included is the raw output.  Not sure if you find it useful, but was a fun exercise. 
+>>
+>>         C
+>>
+>>

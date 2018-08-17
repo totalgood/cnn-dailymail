@@ -1,0 +1,14 @@
+## cnn questions and news
+
+- https://drive.google.com/uc?export=download&id=0BwmD_VLjROrfTTljRDVZMFJnVWM
+* https://drive.google.com/uc?export=download&id=0BwmD_VLjROrfTHk4NFg2SndKcjQ
+
+## daily mail, questions and news
+
+- https://drive.google.com/uc?export=download&id=0BwmD_VLjROrfN0xhTDVteGQ3eG8
+* https://drive.google.com/uc?export=download&id=0BwmD_VLjROrfM1BxdkxVaTY2bWs
+
+## tokenized cnn and dailymail files:
+
+- https://drive.google.com/file/d/0BzQ6rtO2VN95cmNuc2xwUS1wdEE/view?usp=sharing
+- https://drive.google.com/file/d/0BzQ6rtO2VN95bndCZDdpdXJDV1U/view?usp=sharing
